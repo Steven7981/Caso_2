@@ -9,7 +9,16 @@
     },
 
     "cantante":{
-        "duracionCancion":120
+        "canciones":[
+            {
+                "cancion1":123,
+                "cancion2":120,
+                "cancion3":140,
+                "cancion4":132,
+                "cancion5":145,
+                "cancion6":155
+        }
+        ]
     }
 
 }
