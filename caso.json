@@ -1,7 +1,10 @@
 {
     "seguridadZona":{
-    "duracionRevisarEntrada": 5
-
+    "duracionRevisarEntrada":{ 
+       "minimo": 5,
+       "maximo":15
+    },
+    "entrada":0.7
 },
 
     "comida": {
