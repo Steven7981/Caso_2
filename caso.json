@@ -1,1 +1,15 @@
-"seguridadZona"= 
+{
+    "seguridadZona":{
+    "duracionRevisarEntrada": 5
+
+},
+
+    "comida": {
+        "duracionAtender":5
+    },
+
+    "cantante":{
+        "duracionCancion":120
+    }
+
+}
