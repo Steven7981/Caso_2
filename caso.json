@@ -1,10 +1,13 @@
 {
+    //todo sera realizado en milisegundos cuando se trata de duracion
     "seguridadZona":{
     "duracionRevisarEntrada":{ 
        "minimo": 5,
        "maximo":15
     },
     "entrada":0.7
+    //el porcentaje de personas que recibiran una entrada, solo el 70% de las personas que se creen tendra entrada. 
+    //para decidir si tendran entrada, se hace aleatorio
 },
 
     "comida": {
