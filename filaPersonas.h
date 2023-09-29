@@ -2,16 +2,17 @@
 #include <queue>
 #include <iostream>
 #include <string>
+using namespace std;
 
 class filaPersona{
     private:
-        std::queue<Fanatico> fila;
+        queue<Fanatico> fila;
     public:
         void agregarPersonas(Fanatico fan){
             fila.push(fan);
         }
 
-        std::queue<Fanatico> getFila(){
+        queue<Fanatico> getFila(){
             return fila;
         }
 };
