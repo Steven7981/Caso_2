@@ -8,7 +8,7 @@ class Fanatico{
         string nombre;
     
     public:
-        void fanatico(Persona persona){
+        void fanatico(Persona persona,std::string nombre){
             //crea un fan
         }
 };
