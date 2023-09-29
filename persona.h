@@ -1,10 +1,11 @@
 #include <iostream>
+using namespace std;
 class Persona{
     private:
-        std::string tipo;
+        string tipo;
 
     public:
-        std::string persona(std::string tipo){
+        string persona(std::string tipo){
             return "Persona tipo" + tipo; //constructor
         }
 };
