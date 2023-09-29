@@ -5,7 +5,13 @@
 
 class filaPersona{
     private:
-        std::queue<std::string> fila;
+        std::queue<Persona> fila;
     public:
-        
+        void agregarPersonas(Persona persona){
+            fila.push(persona);
+        }
+
+        std::queue<Persona> getFila(){
+            return fila;
+        }
 };
