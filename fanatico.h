@@ -1,10 +1,11 @@
 #include "persona.h"
 #include <iostream>
 #include <string>
+using namespace std;
 
 class Fanatico{
     private:
-        std::string nombre;
+        string nombre;
     
     public:
         void fanatico(Persona persona){
