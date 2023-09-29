@@ -5,7 +5,7 @@ class Persona{
         string tipo;
 
     public:
-        string persona(std::string tipo){
+        string persona(string tipo){
             return "Persona tipo" + tipo; //constructor
         }
 };
