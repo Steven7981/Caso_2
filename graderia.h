@@ -1,10 +1,11 @@
 #include "filaPersonas.h"
 #include <queue>
 #include <iostream>
+using namespace std;
 
 class Graderia{
     private:
-        std::queue<Fanatico> colaFan;
+        queue<Fanatico> colaFan;
 
     public:
         void graderia(){
