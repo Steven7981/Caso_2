@@ -2,11 +2,11 @@
     "hora de entrada al concierto":{"inicio":4,"cierre":7},
 
     "guardas de seguridad por graderia":{"minimo": 1, "maximo": 4},
-    "cantidad de personas en una fila":{"minimo":1, "maximo":1000},
-    "cantidad de personas entrando a la fila por minuto":300,
+    "cantidad de personas en una fila":{"minimo":1, "maximo":1200},
+    "cantidad de personas entrando a la fila cada 5 minutos":300,
     "cantidad de graderia":3,
     "maxima cantidad de personas en graderia":{"minimo":0,"maximo":20000},
-    "entrada":0.7,
+    "bool de entrada":0.7,
     "duracion en atender a persona en fila":{"minimo":5, "maximo":20},
 
 
