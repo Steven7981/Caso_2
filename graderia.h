@@ -1,8 +1,6 @@
 #include "filaPersonas.h"
 #include <queue>
 #include <iostream>
-#include "json.hpp"
-using json = nlohmann::json;
 
 using namespace std;
 
