@@ -26,6 +26,6 @@ class Comida{
 
             //se elige un numero aleatorio entre la duracion minima y maxima, y eso es lo que durara en atender 
             int numeroAleatorio = distribucion(generador);
-
+                //thread para que espere la cantidad necesaria segun el numero aleatorio
                 }
 };
