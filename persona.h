@@ -5,7 +5,14 @@ class Persona{
         string tipo;
 
     public:
-        string persona(string tipo){
-            return "Persona tipo" + tipo; //constructor
+
+        Persona persona(string tipo){
+            Persona nuevaPersona;
+            nuevaPersona.tipo = tipo;
+            return nuevaPersona;//constructor
         }
+
+
+
+
 };
