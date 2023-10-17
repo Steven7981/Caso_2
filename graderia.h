@@ -1,5 +1,5 @@
 #include "filaPersonas.h"
-#include <queue>
+#include <stack>
 #include <iostream>
 #include "json.hpp"
 #include <fstream>
@@ -17,20 +17,20 @@ archivo >> datos;
 int maxPersonasGraderia = datos["maxima cantidad de personas en graderia"]["maximo"];
 class Graderia{
     private:
-        queue<Fanatico> colaFan;
+        stack<Fanatico> colaFan;
 
     public:
         void graderia(){
-            colaFan = queue<Fanatico>();
+            pilaFan = stack<Fanatico>();
         }
         void agregarFanatico(Fanatico fan){
-            if (colaFan.size()<=grande){
-                if (!colaFan.size()=maxPersonasGraderia){
-                    colaFan.push(fan);
+            if (pilaFan.size()<=grande){
+                if (!pilaFan.size()=maxPersonasGraderia){
+                    pilaFan.push(fan);
                 }
             }
         }
         void salirGraderia(){
-            colaFan.pop();
+            pilaFan.pop();
         }
 };
