@@ -1,17 +1,21 @@
 {
 
-    "guardas de seguridad por graderia":{"minimo": 1, "maximo": 4},
-    "cantidad de personas en una fila":{"minimo":1, "maximo":40},
-    "cantidad de graderia":4,
-    "maxima cantidad de personas en graderia":{"minimo":0,"maximo":35},
+    "duracionSimulacion":300000,
+    "duracionEntrarConcierto":120000,
+    
+    "guardas":1,
+    "atencionFan":5,
+    "cantFilas":4,
+    "graderiaMax":1500,
+
+    "graderias":4,
+    "filaFanMax":15000,
     "entrada":0.7,
-    "duracion en atender a persona en fila":{"minimo":5, "maximo":20},
 
-
-    "cantidad de camion de comida":3,
-    "chefs por camion":{"minimo": 1, "maximo": 4},
-    "cantidad de personas en fila para comida":{"minimo":0,"maximo":20},
-    "duracion en atender en camion comida":{"minimo":5,"maximo":60},
+    "camiones":3,
+    "chefsPorCamion":1,
+    "filaComMax":200,
+    "atencionCom":10,
 
     "cantante":{
         "canciones":[
@@ -32,12 +36,7 @@
         }
         ]
     },
-    "duracion en salir graderia":{"minimo":3, "maximo":10},
+    "duracionSalir":4,
 
-  "fanatico": {
-    "personas generadas por minuto": {
-      "minimo": 2000,
-      "maximo": 5000
-    }
-  }
+  "fanLlegar":2  
 }
