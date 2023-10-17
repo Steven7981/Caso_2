@@ -14,11 +14,12 @@ ifstream archivo(nombreArchivo);
 json datos;
 archivo >> datos;
 
-int duracionAtencionCamionMin = datos["duracion en atender en camion comida"]["minimo"];
-int duracionAtencionCamionMax = datos["duracion en atender en camion comida"]["maximo"];
 
 class Comida{
     public:
+        int duracionAtencionCamionMin = datos["duracion en atender en camion comida"]["minimo"];
+        int duracionAtencionCamionMax = datos["duracion en atender en camion comida"]["maximo"];
+        
         void atender(queue<Fanatico> ){
             random_device rd;
             mt19937 generador(rd()); 
