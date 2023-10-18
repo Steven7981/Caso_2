@@ -31,6 +31,10 @@ class jsonDatos{
     int *tiempoSalir;
 
     public:
+    simulacion(){
+        cargar();
+    }
+    
     void setDuracionSimulacion(int* tiempo){
         duracionSimulacion = tiempo;
     }
@@ -100,7 +104,7 @@ class jsonDatos{
     int* getDuracionEntrarConcierto(){
         return duracionEntrarConcierto;
     }
-    
+
     int* getTiempoLlegarFan(){
         return tiempoLlegarFan;
     }
