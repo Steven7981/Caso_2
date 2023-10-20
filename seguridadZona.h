@@ -4,21 +4,12 @@
 
 
 class seguridadZona{
-private:
-	queue<Fanatico> colaFan;
-
 public:
-	seguridadZona crearSeguridad(){
-		seguridadZona Personal;
-		return Personal;
-	}
+	seguridadZona(){
 
+	}	
 	void revisarEntrada(Fanatico fan){
-		if (fan.getEntrada){
-			colaFan.push(fan)//cola con las personas aceptadas que pasan a la graderia
-		}
-		else {
-			cout << "El fanatico no tiene entrada." << endl;
-		}
+		bool confirmacion;
+		confirmacion = fan.mostrarEntrada();
 	}
-}
+};
