@@ -182,6 +182,10 @@ class jsonDatos{
     graderiaMax = new int(data["graderiaMax"].get<int>());
 
     tiempoSalir = new int(data["duracionSalir"].get<int>());
+
+    duracionSimulacion = new int(data["duracionSimulacion"].get<int>());
+
+    setDuracionSimulacion(duracionSimulacion);
     }
 
 }
