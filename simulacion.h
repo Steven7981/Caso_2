@@ -1,3 +1,6 @@
+#ifndef simulacion_h
+#define simulacion_h
+
 #include <json.hpp>
 #include <fstream>
 #include <iostream>
@@ -13,11 +16,12 @@ class jsonDatos{
     int *duracionEntrarConcierto;
 
     //antes de entrar al concierto
-    int *tiempoLlegarFan;
+    int *cantidadLlegarFan;
     int *guardas;
     int *filaFan;
     int *atencionFan;
     int *cantFilas;
+    int *tiempoLlegarFan;
 
     //comida
     int *camiones;
@@ -45,10 +49,13 @@ class jsonDatos{
     void setCantFilas(int* cantidad){
         cantFilas = cantidad;
     }
+    void setCantLlegarFan(int* cantidad){
+        cantidadLlegarFan = tiempo;
+    }
+
     void setTiempoLlegarFan(int* tiempo){
         tiempoLlegarFan = tiempo;
     }
-
     void setGuardasMin(int* minimo){
         guardasMin = minimo;
     }
@@ -101,10 +108,13 @@ class jsonDatos{
         return duracionEntrarConcierto;
     }
 
+    int* getCantidadLlegarFan(){
+        return cantidadLlegarFan;
+    }
+
     int* getTiempoLlegarFan(){
         return tiempoLlegarFan;
     }
-
     int* getGuardasMin(){
         return guardasMin;
     }
@@ -157,7 +167,9 @@ class jsonDatos{
 
     cantFilas = new int(data["cantFilas"].get<int>());
 
-    tiempoLlegarFan = new int(data["fanLlegar"].get<int>());
+    cantidadLlegarFan = new int(data["fanLlegar"].get<int>());
+
+    tiempoLlegarFan = new int(data["duracionLlegar"].get<int>());
 
     guardas = new int(data["guardas"].get<int>());
 
@@ -189,7 +201,9 @@ class jsonDatos{
 
     setCantFilas(cantFilas);
 
-    setTiempoLlegarFan(tiempoLlegarFan);
+    setCantidadLlegarFan(cantidadLlegarFan);
+
+    setTiempoLlegarFan(tiempoLlegarFan)
 
     setGuardasMin(guardas);
 
@@ -213,4 +227,5 @@ class jsonDatos{
 
     }
 
-}
+};
+#endif simulacion_h
