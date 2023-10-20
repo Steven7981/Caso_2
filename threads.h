@@ -5,9 +5,7 @@
 #include "canciones.h"
 #include "cantante.h"
 #include "fanatico.h"
-#include "filaComida.h"
 #include "graderia.h"
-#include "filaPersonas.h"
 #include "json.hpp"
 #include "persona.h"
 #include "seguridadZona.h"
@@ -39,8 +37,5 @@ class Threads{
             
         }
 }
-
-
-
 
 #endif threads_h
