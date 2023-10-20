@@ -38,5 +38,6 @@
     },
     "duracionSalir":4,
 
-  "fanLlegar":2  
+  "fanLlegar":300,
+  "duracionLlegar":10  
 }
