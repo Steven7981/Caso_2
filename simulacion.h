@@ -69,12 +69,8 @@ class jsonDatos{
         camiones = cantidad;
     }
 
-    void setChefsCamionMin(int* minimo){
-        chefsCamionMin = minimo;
-    }
-
-    void setChefsCamionMax(int* maximo){
-        chefsCamionMax = maximo;
+    void setChefsCamion(int* cantidad){
+        chefsCamion=cantidad;
     }
 
     void setFilaComMax(int* maximo){
@@ -185,7 +181,36 @@ class jsonDatos{
 
     duracionSimulacion = new int(data["duracionSimulacion"].get<int>());
 
+    duracionEntrarConcierto = new int(data["duracionEntrarConcierto"].get<int>());
+
     setDuracionSimulacion(duracionSimulacion);
+
+    setDuracionEntrarConcierto(duracionEntrarConcierto);
+
+    setCantFilas(cantFilas);
+
+    setTiempoLlegarFan(tiempoLlegarFan);
+
+    setGuardasMin(guardas);
+
+    setFilaFanMax(filaFanMax);
+
+    setAtencionFan(atencionFan);
+
+    setCamiones(camiones);
+
+    setChefsCamion(chefsCamion);
+
+    setFilaComMax(filaComMax);
+
+    setAtencionCom(atencionCom);
+
+    setGraderias(graderias);
+
+    setGraderiasMax(graderiaMax);
+
+    setTiempoSalir(tiempoSalir);
+
     }
 
 }
