@@ -2,7 +2,6 @@
 #define threads_h
 
 #include "camionComida.h"
-#include "canciones.h"
 #include "cantante.h"
 #include "fanatico.h"
 #include "graderia.h"
@@ -23,14 +22,15 @@ class Threads{
 
     public:
         void llegarFans(){
-            int* cantFans = simulacion.getCantidadLlegarFan();
-            int* tiempo_llegar = simulacion.getTiempoLlegarFan();
-            int* maximo_fila = simulacion.getFilaFanMax();
+            int cantFans = simulacion.getCantidadLlegarFan();
+            int tiempo_llegar = simulacion.getTiempoLlegarFan();
+            int maximo_fila = simulacion.getFilaFanMax();
 
-            for (j = 0; j<maximo_fila; j++){
+            for (int j = 0; j<maximo_fila; j++){
                 for (int i = 0; i < cantFans; i++){
                     Fanatico *fan = new Fanatico();
-                    fila.enqueue(fan);
+                    fila.push(fan);
+                    cout<<"Llegaron "<< cantFan <<" a la cola.";
             }
                 this_thread::sleep_for(*tiempo_llegar * seconds(1));
             }
