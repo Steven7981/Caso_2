@@ -17,25 +17,23 @@
     "filaComMax":200,
     "atencionCom":10,
 
-    "cantante":{
-        "canciones":[
-            {
-                "cancion1":123,
-                "cancion2":120,
-                "cancion3":140,
-                "cancion4":132,
-                "cancion5":145,
-                "cancion6":155,
-                "cancion7":142,
-                "cancion8":109,
-                "cancion9":201,
-                "cancion10":178,
-                "cancion11":142,
-                "cancion12":165,
-                "cancion13":131
-        }
-        ]
-    },
+    "canciones":[
+        {
+            "cancion1":123,
+            "cancion2":120,
+            "cancion3":140,
+            "cancion4":132,
+            "cancion5":145,
+            "cancion6":155,
+            "cancion7":142,
+            "cancion8":109,
+            "cancion9":201,
+            "cancion10":178,
+            "cancion11":142,
+            "cancion12":165,
+            "cancion13":131
+    }
+    ],
     "duracionSalir":4,
 
   "fanLlegar":300,
