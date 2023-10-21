@@ -1,3 +1,6 @@
+#ifndef fanatico_h
+#define fanatico_h
+
 #include <iostream>
 #include <random>
 #include "generadorRandom.h"
@@ -22,3 +25,5 @@ class Fanatico {
             //ir ya sea a hacer fila al camion de comida or ir a la graderia
         }
 };
+
+#endif
