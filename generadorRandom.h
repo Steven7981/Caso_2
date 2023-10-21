@@ -1,3 +1,5 @@
+#ifndef generadorRandom_h
+#define generadorRandom_h
 #include <iostream>
 #include <random>
 
@@ -13,3 +15,5 @@ private:
     std::uniform_int_distribution<int> distribution;
     std::mt19937 generator;
 };
+
+#endif
