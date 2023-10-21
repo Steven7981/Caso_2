@@ -1,7 +1,7 @@
 #ifndef simulacion_h
 #define simulacion_h
 
-#include <json.hpp>
+#include "json.hpp"
 #include <fstream>
 #include <iostream>
 
@@ -16,12 +16,12 @@ class jsonDatos{
     int *duracionEntrarConcierto;
 
     //antes de entrar al concierto
-    int *cantidadLlegarFan;
+    int cantidadLlegarFan;
     int *guardas;
-    int *filaFan;
+    int filaFanMax;
     int *atencionFan;
     int *cantFilas;
-    int *tiempoLlegarFan;
+    int tiempoLlegarFan;
 
     //comida
     int *camiones;
@@ -93,7 +93,7 @@ class jsonDatos{
     }
 
     void setGraderiasMax(int* maximo){
-        graderiasMax = maximo;
+        graderiaMax = maximo;
     }
 
     void setTiempoSalir(int* tiempo){
@@ -152,7 +152,7 @@ class jsonDatos{
     }
 
     int* getGraderiasMax(){
-        return graderiasMax;
+        return graderiaMax;
     }
 
     int* getTiempoSalir(){
@@ -203,7 +203,7 @@ class jsonDatos{
 
     setCantidadLlegarFan(cantidadLlegarFan);
 
-    setTiempoLlegarFan(tiempoLlegarFan)
+    setTiempoLlegarFan(tiempoLlegarFan);
 
     setGuardasMin(guardas);
 
@@ -228,4 +228,4 @@ class jsonDatos{
     }
 
 };
-#endif simulacion_h
+#endif
