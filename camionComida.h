@@ -17,6 +17,6 @@ class Comida{
             Fanatico fan;
             fan = filaDeComida.front();
             filaDeComida.pop();
-            cout<<"Se atendio a la persona que estaba frente a la cola de comida"<<endln;
+            cout<<"Se atendio a la persona que estaba frente a la cola de comida"<<endl;
         }
 };
