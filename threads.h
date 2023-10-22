@@ -22,6 +22,7 @@ class Threads{
 
     public:
         void llegarFans(){
+            cout<<"fdfd";
             int cantFans = simulacion.getCantidadLlegarFan();
             int tiempo_llegar = simulacion.getTiempoLlegarFan();
             int maximo_fila = simulacion.getFilaFanMax();
