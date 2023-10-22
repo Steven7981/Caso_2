@@ -1,3 +1,6 @@
+#ifndef graderia_h
+#define graderia_h
+
 #include <stack>
 #include <iostream>
 #include <fstream>
@@ -14,3 +17,5 @@ class Graderia{
         }
 
 };
+
+#endif
