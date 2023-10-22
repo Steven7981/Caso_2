@@ -22,7 +22,7 @@ class Threads{
 
     public:
         void llegarFans(){
-            cout<<"fdfd";
+            simulacion.simulacion();
             int cantFans = simulacion.getCantidadLlegarFan();
             int tiempo_llegar = simulacion.getTiempoLlegarFan();
             int maximo_fila = simulacion.getFilaFanMax();
@@ -31,8 +31,8 @@ class Threads{
                 for (int i = 0; i < cantFans; i++){
                     Fanatico fan;
                     fila.push(fan);
-                    cout<<"Llegaron "<< cantFans <<" a la cola.";
             }
+                cout<<"Llegaron "<< cantFans <<" a la cola. ";
                 this_thread::sleep_for(tiempo_llegar * chrono::seconds(1));
             }
             
