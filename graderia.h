@@ -1,17 +1,21 @@
-#include "filaPersonas.h"
-#include <queue>
+#ifndef graderia_h
+#define graderia_h
+
+#include <stack>
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 class Graderia{
     private:
-        queue<Fanatico> colaFan;
+        stack<Fanatico> colaFan;
 
     public:
-        void graderia(){
-            //constructor
+    //cuando termie el concierto, ir sacando a la gente de las graderias
+        void salirGraderia(){
+            colaFan.pop();
         }
-        void agregarFanatico(){
-            //agrega fanaticos a la cola de graderia
-        }
+
 };
+
+#endif
