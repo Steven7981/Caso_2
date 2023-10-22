@@ -26,9 +26,8 @@ class Cantante{
             std::vector<int> canciones = data["canciones"];
 
             for (auto cancion : canciones){
-                int duracion = cancion.value();
-                string orden = cancion.key();
-                cout<<"Cantando la cancion "<< orden << " durante "<< duracion <<" segundos."<<endl;
+                int duracion = cancion;
+                cout<<"Cantando una cancion con una duracion de "<< duracion;
                 this_thread::sleep_for(chrono::seconds(duracion));
                 canciones.erase();
             }
