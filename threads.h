@@ -28,14 +28,14 @@ class Threads{
 
             for (int j = 0; j<maximo_fila; j++){
                 for (int i = 0; i < cantFans; i++){
-                    Fanatico *fan = new Fanatico();
+                    Fanatico fan;
                     fila.push(fan);
-                    cout<<"Llegaron "<< cantFan <<" a la cola.";
+                    cout<<"Llegaron "<< cantFans <<" a la cola.";
             }
-                this_thread::sleep_for(*tiempo_llegar * seconds(1));
+                this_thread::sleep_for(tiempo_llegar * chrono::seconds(1));
             }
             
         }
-}
+};
 
-#endif threads_h
+#endif
