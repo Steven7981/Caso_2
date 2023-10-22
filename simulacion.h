@@ -12,150 +12,142 @@ using json = nlohmann::json;
 
 class jsonDatos{
     private:
-    int *duracionSimulacion;
-    int *duracionEntrarConcierto;
+    int duracionSimulacion;
+    int duracionEntrarConcierto;
 
     //antes de entrar al concierto
     int cantidadLlegarFan;
-    int *guardas;
+    int guardas;
     int filaFanMax;
-    int *atencionFan;
-    int *cantFilas;
+    int atencionFan;
+    int cantFilas;
     int tiempoLlegarFan;
 
     //comida
-    int *camiones;
-    int *chefsCamion;
-    int *filaComMax;
-    int *atencionCom;
+    int camiones;
+    int chefsCamion;
+    int filaComMax;
+    int atencionCom;
 
     //graderia
-    int *graderias;
-    int *graderiaMax;
-    int *tiempoSalir;
+    int graderias;
+    int graderiaMax;
+    int tiempoSalir;
 
     public:
-    simulacion(){
+    void simulacion(){
         cargar();
     }
     
-    void setDuracionSimulacion(int* tiempo){
+    void setDuracionSimulacion(int tiempo){
         duracionSimulacion = tiempo;
     }
 
-    void setDuracionEntrarConcierto(int* tiempo){
+    void setDuracionEntrarConcierto(int tiempo){
         duracionEntrarConcierto = tiempo;
     }
-    void setCantFilas(int* cantidad){
+    void setCantFilas(int cantidad){
         cantFilas = cantidad;
     }
-    void setCantLlegarFan(int* cantidad){
-        cantidadLlegarFan = tiempo;
+    void setCantLlegarFan(int cantidad){
+        cantidadLlegarFan = cantidad;
     }
 
-    void setTiempoLlegarFan(int* tiempo){
+    void setTiempoLlegarFan(int tiempo){
         tiempoLlegarFan = tiempo;
     }
-    void setGuardasMin(int* minimo){
-        guardasMin = minimo;
+    void setGuardas(int cantidad){
+        guardas = cantidad;
     }
 
-    void setGuardasMax(int* maximo){
-        guardasMax = maximo;
-    }
-
-    void setFilaFanMax(int* cantidad){
+    void setFilaFanMax(int cantidad){
         filaFanMax = cantidad;
     }
 
-    void setAtencionFan(int* tiempo){
+    void setAtencionFan(int tiempo){
         atencionFan = tiempo;
     }
 
-    void setCamiones(int* cantidad){
+    void setCamiones(int cantidad){
         camiones = cantidad;
     }
 
-    void setChefsCamion(int* cantidad){
+    void setChefsCamion(int cantidad){
         chefsCamion=cantidad;
     }
 
-    void setFilaComMax(int* maximo){
+    void setFilaComMax(int maximo){
         filaComMax = maximo;
     }
 
-    void setAtencionCom(int* tiempo){
-        atencionCom=tiempo;
+    void setAtencionCom(int tiempo){
+        atencionCom = tiempo;
     }
 
-    void setGraderias(int* cantidad){
+    void setGraderias(int cantidad){
         graderias = cantidad;
     }
 
-    void setGraderiasMax(int* maximo){
+    void setGraderiasMax(int maximo){
         graderiaMax = maximo;
     }
 
-    void setTiempoSalir(int* tiempo){
+    void setTiempoSalir(int tiempo){
         tiempoSalir= tiempo;
     }
     
-    int* getDuracionSimulacion(){
+    int getDuracionSimulacion(){
         return duracionSimulacion;
     }
 
-    int* getDuracionEntrarConcierto(){
+    int getDuracionEntrarConcierto(){
         return duracionEntrarConcierto;
     }
 
-    int* getCantidadLlegarFan(){
+    int getCantidadLlegarFan(){
         return cantidadLlegarFan;
     }
 
-    int* getTiempoLlegarFan(){
+    int getTiempoLlegarFan(){
         return tiempoLlegarFan;
     }
-    int* getGuardasMin(){
-        return guardasMin;
+    int getGuardas(){
+        return guardas;
     }
 
-    int* getGuardiasMax(){
-        return guardasMax;
-    }
-
-    int* getFilaFanMax(){
+    int getFilaFanMax(){
         return filaFanMax;
     }
 
-    int* getAtencionFan(){
+    int getAtencionFan(){
         return atencionFan;
     }
 
-    int* getCamiones(){
+    int getCamiones(){
         return camiones;
     }
 
-    int* getChefsCamion(){
+    int getChefsCamion(){
         return chefsCamion;
     }
 
-    int* getFilaComMax(){
+    int getFilaComMax(){
         return filaComMax;
     }
 
-    int* getAtencionCom(){
+    int getAtencionCom(){
         return atencionCom;
     }
 
-    int* getGraderias(){
+    int getGraderias(){
         return graderias;
     }
 
-    int* getGraderiasMax(){
+    int getGraderiasMax(){
         return graderiaMax;
     }
 
-    int* getTiempoSalir(){
+    int getTiempoSalir(){
         return tiempoSalir;
     }
 
@@ -165,35 +157,35 @@ class jsonDatos{
     json data;
     file >> data;
 
-    cantFilas = new int(data["cantFilas"].get<int>());
+    int cantFilas = data["cantFilas"].get<int>();
 
-    cantidadLlegarFan = new int(data["fanLlegar"].get<int>());
+    int cantidadLlegarFan = data["fanLlegar"].get<int>();
 
-    tiempoLlegarFan = new int(data["duracionLlegar"].get<int>());
+    int tiempoLlegarFan = data["duracionLlegar"].get<int>();
 
-    guardas = new int(data["guardas"].get<int>());
+    int guardas = data["guardas"].get<int>();
 
-    filaFanMax = new int(data["filaFanMax"].get<int>());
+    int filaFanMax = data["filaFanMax"].get<int>();
 
-    atencionFan = new int(data["atencionFan"].get<int>());
+    int atencionFan = data["atencionFan"].get<int>();
 
-    camiones = new int(data["camiones"].get<int>());
+    int camiones = data["camiones"].get<int>();
 
-    chefsCamion = new int(data["chefsPorCamion"].get<int>());
+    int chefsCamion = data["chefsPorCamion"].get<int>();
 
-    filaComMax = new int(data["filaComMax"].get<int>());
+    int filaComMax = data["filaComMax"].get<int>();
 
-    atencionCom = new int(data["atencionCom"].get<int>());
+    int atencionCom = data["atencionCom"].get<int>();
 
-    graderias = new int(data["graderias"].get<int>());
+    int graderias = data["graderias"].get<int>();
 
-    graderiaMax = new int(data["graderiaMax"].get<int>());
+    int graderiaMax = data["graderiaMax"].get<int>();
 
-    tiempoSalir = new int(data["duracionSalir"].get<int>());
+    int tiempoSalir = data["duracionSalir"].get<int>();
 
-    duracionSimulacion = new int(data["duracionSimulacion"].get<int>());
+    int duracionSimulacion = data["duracionSimulacion"].get<int>();
 
-    duracionEntrarConcierto = new int(data["duracionEntrarConcierto"].get<int>());
+    int duracionEntrarConcierto = data["duracionEntrarConcierto"].get<int>();
 
     setDuracionSimulacion(duracionSimulacion);
 
@@ -201,11 +193,11 @@ class jsonDatos{
 
     setCantFilas(cantFilas);
 
-    setCantidadLlegarFan(cantidadLlegarFan);
+    setCantLlegarFan(cantidadLlegarFan);
 
     setTiempoLlegarFan(tiempoLlegarFan);
 
-    setGuardasMin(guardas);
+    setGuardas(guardas);
 
     setFilaFanMax(filaFanMax);
 
