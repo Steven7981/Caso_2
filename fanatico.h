@@ -1,14 +1,29 @@
-#include "persona.h"
+#ifndef fanatico_h
+#define fanatico_h
+
 #include <iostream>
-#include <string>
+#include <random>
+#include "generadorRandom.h"
 using namespace std;
 
-class Fanatico{
+class Fanatico {
     private:
-        string nombre;
-    
+        bool entrada = false;
     public:
-        void fanatico(Persona persona,std::string nombre){
-            //crea un fan
+        Fanatico(){
+            RandomNumberGenerator random(1,10);
+            int verificar = random.generateRandomNumber();
+            if (verificar>=5){
+                this->entrada=true;
+            }
+        }
+
+        bool mostrarEntrada(){
+            return entrada;
+        }
+        void moverFan(){
+            //ir ya sea a hacer fila al camion de comida or ir a la graderia
         }
 };
+
+#endif
