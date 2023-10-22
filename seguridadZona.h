@@ -1,9 +1,9 @@
 #ifndef seguridadZona_h
-#define seguridadzona_h
+#define seguridadZona_h
 #include <iostream>
 #include <queue>
 #include "fanatico.h"
-#include "graderia.h"
+
 
 
 class seguridadZona{
