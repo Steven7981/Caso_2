@@ -29,7 +29,7 @@ class Cantante{
                 int duracion = cancion;
                 cout<<"Cantando una cancion con una duracion de "<< duracion;
                 this_thread::sleep_for(chrono::seconds(duracion));
-                canciones.erase();
+                canciones.erase(canciones.begin());
             }
             cout<<"Terminó de cantar todas las canciones. "<< endl;
             return true;
