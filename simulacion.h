@@ -115,6 +115,9 @@ class jsonDatos{
         return guardas;
     }
 
+    int getCantFilas(){
+        return cantFilas;
+    }
     int getFilaFanMax(){
         return filaFanMax;
     }
