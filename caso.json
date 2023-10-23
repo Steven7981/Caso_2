@@ -5,7 +5,7 @@
     "guardas":1,
     "atencionFan":5,
     "cantFilas":4,
-    "graderiaMax":1500,
+    "graderiaMax":15000,
 
     "graderias":4,
     "filaFanMax":15000,
