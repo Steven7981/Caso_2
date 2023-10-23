@@ -9,6 +9,6 @@ int main(void){
     Threads thread;
     Cantante c1;
    // c1.cantar();
-    thread.llegarFans();
+    thread.iniciarSim();
 
 }
