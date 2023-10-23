@@ -4,6 +4,8 @@
 #include <iostream>
 #include <random>
 #include "generadorRandom.h"
+#include "json.hpp"
+
 using namespace std;
 
 class Fanatico {
@@ -11,9 +13,13 @@ class Fanatico {
         bool entrada = false;
     public:
         Fanatico(){
+            ifstream file("caso.json");
+            json data;
+            file >> data;
+            int proba = data["entrada"];
             RandomNumberGenerator random(1,10);
             int verificar = random.generateRandomNumber();
-            if (verificar>=5){
+            if (verificar<=proba){
                 this->entrada=true;
             }
         }
