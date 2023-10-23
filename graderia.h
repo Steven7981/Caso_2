@@ -15,6 +15,17 @@ class Graderia{
         void salirGraderia(){
             colaFan.pop();
         }
+        Graderia(){
+
+        }
+
+        int obtenerSize(){
+            return colaFan.size();
+        }
+
+        void agregar(Fanatico fan){
+            colaFan.push(fan);
+        }
 
 };
 
