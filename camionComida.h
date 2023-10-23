@@ -5,6 +5,9 @@
 #include <fstream>
 #include <queue>
 #include "fanatico.h"
+#include <thread> 
+#include "json.hpp"
+
 using namespace std;
 
 
@@ -13,16 +16,24 @@ class Comida{
         queue<Fanatico> filaDeComida;
     public:
         Comida(){
-
+            
         }
-        void atender(queue<Fanatico> colaComida ){
-            //recibe la cola de colaComida y agarra a uno de la cola para ir atendiendo
-            }
-        void atender(){
+        Fanatico atender(){
+            ifstream file("caso.json");
+            json data;
+            file >> data;
+            int atencion = data["atencionCom"];
             Fanatico fan;
             fan = filaDeComida.front();
             filaDeComida.pop();
-            cout<<"Se atendio a la persona que estaba frente a la cola de comida"<<endl;
+            cout<<"Se atendio a la persona que estaba frente a la cola de comida."<<endl;
+            this_thread::sleep_for(atencion * chrono::seconds(1));
+            return fan;
+        }
+
+        void agregar(Fanatico fan){
+            filaDeComida.push(fan);
+            
         }
 };
 
