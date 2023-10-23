@@ -3,15 +3,15 @@
     "duracionEntrarConcierto":120000,
     
     "guardas":1,
-    "atencionFan":5,
+    "atencionFan":2,
     "cantFilas":4,
     "graderiaMax":15000,
 
     "graderias":4,
     "filaFanMax":15000,
-    "entrada":0.7,
+    "entrada":5,
 
-    "camiones":3,
+    "camiones":1,
     "chefsPorCamion":1,
     "filaComMax":200,
     "atencionCom":10,
@@ -36,5 +36,5 @@
     "duracionSalir":4,
 
   "fanLlegar":300,
-  "duracionLlegar":10  
+  "duracionLlegar":5
 }
