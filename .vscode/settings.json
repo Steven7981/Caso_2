@@ -3,6 +3,7 @@
         "__threading_support": "cpp",
         "thread": "cpp",
         "vector": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "queue": "cpp"
     }
 }
