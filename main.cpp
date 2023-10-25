@@ -7,7 +7,7 @@
 using namespace std;
 
 int main(void){
-    Threads thread;  // Supongo que has definido tu clase Threads
+    Threads thread; 
 
     // Crear los hilos para las funciones
     std::thread hiloLlegarFans(&Threads::llegarFans, &thread);
