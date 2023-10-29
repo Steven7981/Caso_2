@@ -85,6 +85,12 @@ class Threads{
                     }
                     }
                }
+         /*      json canciones = data["canciones"][0];
+
+    
+                for (auto it = canciones.begin(); it != canciones.end(); ++it) {
+                std::cout << it.key() << ": " << it.value() << " segundos" << std::endl;*/
+    }
                 
                 
                 }
