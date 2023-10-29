@@ -5,15 +5,15 @@
     "guardas":1,
     "atencionFan":2,
     "cantFilas":4,
-    "graderiaMax":15000,
+    "graderiaMax":1500,
 
     "graderias":4,
-    "filaFanMax":15000,
+    "filaFanMax":150,
     "entrada":5,
 
     "camiones":1,
     "chefsPorCamion":1,
-    "filaComMax":200,
+    "filaComMax":2000,
     "atencionCom":10,
 
     "canciones":[
@@ -35,6 +35,6 @@
     ],
     "duracionSalir":4,
 
-  "fanLlegar":300,
+  "fanLlegar":30,
   "duracionLlegar":5
 }
