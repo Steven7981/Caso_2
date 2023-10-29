@@ -45,8 +45,8 @@ class Threads{
             int cantFila = simulacion.getCantFilas();
             int cantGraderias = simulacion.getGraderias();
             int maxGraderias = simulacion.getGraderiasMax();
-            int revisarEnt = simulacion.getAtencionFan();
-           // vector<int> canciones = simulacion.getCanciones();
+
+
             seguridadZona guarda;
             Cantante cantante;
 
