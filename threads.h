@@ -28,25 +28,71 @@ class Threads{
         int revisarEnt;
         int cantFila;
         
-        vector<queue<Fanatico>> filaFan;
-        vector<Graderia> graderias;
-        Comida camion;
+        
 
     public:
         
         void iniciarSim(){
+            vector<queue<Fanatico>> filaFan;
+            vector<Graderia> graderias;
+            Comida camion;
             simulacion.simulacion();
-        //    int duracionSim = simulacion.getDuracionSimulacion();
-         //   int duracionConcierto = simulacion.getDuracionEntrarConcierto();
-            
+            int duracionSim = simulacion.getDuracionSimulacion();
+            int duracionConcierto = simulacion.getDuracionEntrarConcierto();
+            int cantFans = simulacion.getCantidadLlegarFan();
             int tiempo_llegar = simulacion.getTiempoLlegarFan();
-
-            
-        }
+            int maximo_fila = simulacion.getFilaFanMax();
+            int cantFila = simulacion.getCantFilas();
+            int cantGraderias = simulacion.getGraderias();
+            int maxGraderias = simulacion.getGraderiasMax();
             seguridadZona guarda;
 
+            while (duracionSim > 0){
+                    vector<queue<Fanatico>> filaFan(cantFila);
+                    int veces = maximo_fila/cantFans;
+                    for(int j = 0; j < cantFila; j++){
+                       // cout<<filaFan[j].size();
+                       for (int h = 0; h < veces; h++){
+                            if (filaFan[j].size() != maximo_fila){
+                                for (int i = 0; i < cantFans; i++){
+                                Fanatico fan;
+                                filaFan[j].push(fan);
+                                
+                            // this_thread::sleep_for(tiempo_llegar * chrono::seconds(1));
+                        }
+                        cout<<"Llegaron "<< cantFans <<" a la fila numero "<< j+1<<endl;
+                        
+                       }
+                        cout<<"La fila "<< j+1<< " esta lleno, hay "<< filaFan[j].size()<< " fanaticos."<< endl;
+                    }
+                    }
+                int k;
+                int l = 0;
+                for (k=0; k<cantFila; k++){
+                    while (!filaFan[k].empty()) {
+                    Fanatico fan = filaFan[k].front();
+                    cout << "Revisando entrada" << endl;
+                    if (guarda.revisarEntrada(fan)) {
+                        cout << "Se dejó pasar un fanático a la gradería número " << l+1 << endl;
+                        graderias[l].agregar(fan);
+                       // this_thread::sleep_for(revisarEnt * chrono::seconds(1));
+                        filaFan[k].pop();
+                    } 
+                    if (!guarda.revisarEntrada(fan)) {
+                        cout << "Alguien fue a la estación de comida" << endl;
+                        camion.agregar(fan);
+                        filaFan[k].pop();
+                    }
+                    }
+               }
+                
+                
+                }
+            }
+        
+
        //     while (duracionSim > 0){
-        Threads(){
+    /*    Threads(){
             int cantGraderias = simulacion.getGraderias();
             int maxGraderias = simulacion.getGraderiasMax();
             int revisarEnt = simulacion.getAtencionFan();
@@ -118,7 +164,7 @@ class Threads{
 
     }
     
-                
+                */
            //     duracionSim--;
        //         this_thread::sleep_for(chrono::seconds(1));
             
