@@ -33,6 +33,7 @@ class jsonDatos{
     int graderias;
     int graderiaMax;
     int tiempoSalir;
+    json canciones;
 
     public:
     void simulacion(){
@@ -95,6 +96,10 @@ class jsonDatos{
     void setTiempoSalir(int tiempo){
         tiempoSalir= tiempo;
     }
+
+    void setCanciones(json Canciones){
+        canciones = Canciones;
+    }
     
     int getDuracionSimulacion(){
         return duracionSimulacion;
@@ -154,6 +159,16 @@ class jsonDatos{
         return tiempoSalir;
     }
 
+    vector<int> getCanciones(){
+        std::vector<int> tiempos;
+
+        for (json::iterator it = canciones.begin(); it != canciones.end(); ++it) {
+        int tiempo = it.value();
+        tiempos.push_back(tiempo);
+    }
+    return tiempos;
+    }
+
     //declarar los valores como esta en el json
     void cargar(){
     ifstream file("caso.json");
@@ -190,6 +205,8 @@ class jsonDatos{
 
     int duracionEntrarConcierto = data["duracionEntrarConcierto"].get<int>();
 
+    json cancionesJ = data["canciones"][0];
+
     setDuracionSimulacion(duracionSimulacion);
 
     setDuracionEntrarConcierto(duracionEntrarConcierto);
@@ -219,6 +236,8 @@ class jsonDatos{
     setGraderiasMax(graderiaMax);
 
     setTiempoSalir(tiempoSalir);
+
+    setCanciones(cancionesJ);
 
     }
 
