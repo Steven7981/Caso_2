@@ -45,7 +45,10 @@ class Threads{
             int cantFila = simulacion.getCantFilas();
             int cantGraderias = simulacion.getGraderias();
             int maxGraderias = simulacion.getGraderiasMax();
+            int revisarEnt = simulacion.getAtencionFan();
+           // vector<int> canciones = simulacion.getCanciones();
             seguridadZona guarda;
+            Cantante cantante;
 
             while (duracionSim > 0){
                     vector<queue<Fanatico>> filaFan(cantFila);
@@ -58,7 +61,7 @@ class Threads{
                                 Fanatico fan;
                                 filaFan[j].push(fan);
                                 
-                            // this_thread::sleep_for(tiempo_llegar * chrono::seconds(1));
+                             this_thread::sleep_for(tiempo_llegar * chrono::seconds(1));
                         }
                         cout<<"Llegaron "<< cantFans <<" a la fila numero "<< j+1<<endl;
                         
@@ -66,35 +69,48 @@ class Threads{
                         cout<<"La fila "<< j+1<< " esta lleno, hay "<< filaFan[j].size()<< " fanaticos."<< endl;
                     }
                     }
-                int k;
-                int l = 0;
-                for (k=0; k<cantFila; k++){
-                    while (!filaFan[k].empty()) {
-                    Fanatico fan = filaFan[k].front();
-                    cout << "Revisando entrada" << endl;
-                    if (guarda.revisarEntrada(fan)) {
-                        cout << "Se dejó pasar un fanático a la gradería número " << l+1 << endl;
-                        graderias[l].agregar(fan);
-                       // this_thread::sleep_for(revisarEnt * chrono::seconds(1));
-                        filaFan[k].pop();
-                    } 
-                    if (!guarda.revisarEntrada(fan)) {
-                        cout << "Alguien fue a la estación de comida" << endl;
-                        camion.agregar(fan);
-                        filaFan[k].pop();
+                vector<Graderia> graderias(cantGraderias);
+                int p = 0;
+            for (int l = 0; l < cantGraderias; l++) {
+                for (int k = 0; k < cantFila; k++) {
+                    if (graderias[l].obtenerSize() == maxGraderias) {
+                        break;
                     }
+                    if (p == maximo_fila){
+                        break;
                     }
-               }
+                         while (!filaFan[k].empty()) {
+                            p++;
+                            Fanatico fan = filaFan[k].front();
+                            cout << "Revisando entrada" << endl;
+                            if (guarda.revisarEntrada(fan)) {
+                                cout << "Se dejó pasar un fanático a la gradería número " << l << endl;
+                                graderias[l].agregar(fan);
+                         //      this_thread::sleep_for(revisarEnt * chrono::seconds(1));
+                            } else {
+                                cout << "Alguien fue a la estación de comida" << endl;
+                                camion.agregar(fan);
+                            }
+                            filaFan[k].pop();
+                    }
+                }
+            }
+            cout<<"Ya se atendió a todos en la fila de espera."<<endl;
+            this_thread::sleep_for(2 * chrono::seconds(1));
+            cout<<"El cantante ya terminó todas sus canciones, el concierto ha terminado."<<endl;
+            break;
+
+
          /*      json canciones = data["canciones"][0];
 
     
                 for (auto it = canciones.begin(); it != canciones.end(); ++it) {
                 std::cout << it.key() << ": " << it.value() << " segundos" << std::endl;*/
-    }
+    
                 
                 
-                }
-            }
+                
+            
         
 
        //     while (duracionSim > 0){
@@ -171,12 +187,13 @@ class Threads{
     }
     
                 */
-           //     duracionSim--;
-       //         this_thread::sleep_for(chrono::seconds(1));
+               duracionSim--;
+               this_thread::sleep_for(chrono::seconds(1));
             
-      //      }
-         //   cout<<"Terminó el concierto";
-  //      }
+            }
+            cout<<"Terminó la simulacion. "<<endl;
+        }
+       
 };
 
 #endif
